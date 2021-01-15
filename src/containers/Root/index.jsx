@@ -1,35 +1,39 @@
 import React from 'react';
 import useConnect from './connect';
+import { Redirect, Route, Switch } from 'react-router-dom';
+import PrivateRoute from '../../components/PrivateComponent';
+
+import Landing from '../Views/Landing';
+import About from '../Views/About';
+import Apartments from '../Views/Apartments';
+import Cities from '../Views/Cities';
+import Categories from '../Views/About';
+
+import Profile from '../Views/Profile';
 
 const Root = () => {
-  const { isLoading, login, me } = useConnect();
+  const { isLoading, isAuth } = useConnect();
 
   if (isLoading) return <>Loading...</>;
 
-  if (me) {
-      return (
-        <h1>Hola {me.id}</h1>
-      );
-  }
-
   return (
-    <div>
-        {console.log(me)}
-      <button
-        onClick={() =>
-          login({
-            identifier: "admin@gmail.com",
-            password: "Admin123",
-          })
-        }
-        type="button"
-        data-bs-toggle="modal"
-        data-bs-target="#exampleModal"
-        className="btn btn-primary"
-      >
-        Login
-      </button>
-    </div>
+    <>
+      <Switch>
+        <Route component={Landing} exact path="/" />
+        <Route component={Cities} exact path="/cities" />
+        <Route component={About} exact path="/about" />
+        <Route component={Categories} exact path="/categories" />
+        <Route component={Apartments} exact path="/apartments" />
+
+        <PrivateRoute
+          component={Profile}
+          path="/profile"
+          isAuthenticated={isAuth}
+        />
+
+        <Redirect to="/" />
+      </Switch>
+    </>
   );
 }
 

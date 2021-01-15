@@ -1,14 +1,13 @@
-import useAuth from '../../data/hooks/useAuth';
 import useMe from '../../data/hooks/useMe';
 
 const useConnect = () => {
-    const { login, isLoading: loadingLogin } = useAuth();
-    const { me, isLoading: loadingMe } = useMe();
+    const { me, isLoading } = useMe();
+
+    const isAuth = !!me;
 
     return {
-        me,
-        login,
-        isLoading: loadingLogin || loadingMe,
+        isAuth,
+        isLoading
     }
 }
 
