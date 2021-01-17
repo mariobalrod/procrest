@@ -1,9 +1,9 @@
-import useMe from '../../data/hooks/useMe';
+import useMe from '../../../data/hooks/useMe';
 
 const useConnect = () => {
     const { me, isLoading } = useMe();
 
-    const isAuth = !!me;
+    const isAuth = me ? true : false;
 
     return {
         isAuth,

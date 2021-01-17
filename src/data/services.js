@@ -1,5 +1,5 @@
-const TOKEN_KEY = 'key';
-const ME_KEY = 'key';
+const TOKEN_KEY = 'token';
+const ME_KEY = 'me';
 
 export const getToken = () => localStorage.getItem(TOKEN_KEY) || '';
 

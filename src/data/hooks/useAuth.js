@@ -1,14 +1,11 @@
 import { useCallback } from 'react';
 import { useMutation } from 'react-query';
-import { setToken, setMe } from '../services';
+import { setToken, setMe, removeMe, removeToken } from '../services';
 import client from '../axiosClient';
 
-const loginReq = async ({ identifier, password }) => {
+const loginReq = async (credenciales) => {
   try {
-    const { data } = await client.post(`auth/local`, {
-      identifier,
-      password,
-    });
+    const { data } = await client.post(`/auth/local`, credenciales);
 
     return data;
   } catch (error) {
@@ -16,17 +13,16 @@ const loginReq = async ({ identifier, password }) => {
   }
 };
 
-const useAuth = () => {
-  const { mutateAsync, isLoading } = useMutation(loginReq);
+const useAuth = () => {  
+  const { mutateAsync, isLoading } = useMutation(credenciales => loginReq(credenciales));
 
   const login = useCallback(
-    async ({ identifier, password }) => {
-      const response = await mutateAsync({
-        identifier,
-        password,
-      });
+    async (credenciales) => {
+      const response = await mutateAsync(credenciales);
       
-      if (response && response.jwt) {
+      if (response && response.jwt && response.user) {
+        console.log(response.jwt)
+        console.log(response.user)
         setToken(response.jwt);
         setMe(response.user);
       }
@@ -35,8 +31,18 @@ const useAuth = () => {
     [mutateAsync],
   );
 
+  const logout = useCallback(() => {
+    try {
+      removeToken();
+      removeMe();
+    } catch (error) {
+      console.log(error)
+    }
+  }, []);
+
   return {
     login,
+    logout,
     isLoading,
   };
 };

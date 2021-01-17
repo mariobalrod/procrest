@@ -10,13 +10,10 @@ const client = axios.create({
 
 client.interceptors.request.use((config) => {
   const tokens = getToken();
-  const accessToken = tokens ? JSON.parse(tokens).accessToken : undefined;
 
-  if (accessToken) {
-    // eslint-disable-next-line no-param-reassign
-    config.headers.Authorization = `Bearer ${accessToken}`;
+  if (tokens) {
+    config.headers.Authorization = `Bearer ${JSON.parse(tokens)}`;
   } else {
-    // eslint-disable-next-line no-param-reassign
     delete config.headers.Authorization;
   }
 
