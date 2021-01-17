@@ -1,9 +1,15 @@
-import React from 'react'
+import React from "react";
+import "./styles.css";
 
-const Button = () => {
-    return (
-        <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" className="btn btn-primary">Primary</button>
-    )
-}
+const Button = (props) => {
+  return (
+    <button
+      className="btn btn-primary boton"
+      type={props.type}
+    >
+      {props.text}
+    </button>
+  );
+};
 
-export default Button
+export default Button;
