@@ -1,5 +1,4 @@
 .footer {
-  position: fixed;
   padding: 25px 0;
   bottom: 0;
   width: 100%;
@@ -51,7 +50,6 @@ svg {
   margin-right: 16px;
 }
 .footer-copyright {
-    position: fixed;
     bottom: 0;
     width: 100%;
     color: black;

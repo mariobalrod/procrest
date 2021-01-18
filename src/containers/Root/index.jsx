@@ -12,6 +12,8 @@ import Profile from '../Views/Profile';
 import useConnect from './connect';
 import { useLoading, ThreeDots } from '@agney/react-loading';
 import Loader from '../../components/Loader';
+import Topbar from '../Shared/Topbar';   
+import Footer from '../../components/Footer';
 
 const Root = () => {
   const { isLoading } = useConnect();
@@ -26,6 +28,7 @@ const Root = () => {
 
   return (
     <>
+      <Topbar/>
       <Switch>
         <Route component={Landing} exact path="/" />
         <Route component={Cities} exact path="/cities" />
@@ -36,6 +39,7 @@ const Root = () => {
 
         <Redirect to="/" />
       </Switch>
+      <Footer/>
     </>
   );
 }

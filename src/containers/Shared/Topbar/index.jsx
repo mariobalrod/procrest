@@ -35,7 +35,7 @@ function TopBar(props) {
                         <Button text= "Registro"/>
                     </li>
                     <li className="nav-item " id="botonLogin">
-                        <Button text= "login"/>
+                        <Button text= "Login"/>
                     </li>
                 </div>
         </div>
