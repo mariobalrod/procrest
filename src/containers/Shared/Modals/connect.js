@@ -1,6 +1,6 @@
 import { useCallback, useState } from 'react';
 import { useHistory } from 'react-router-dom'
-import useAuth from '../../../../data/hooks/useAuth';
+import useAuth from '../../../data/hooks/useAuth';
 
 const useConnect = () => {
   const { login, isLoading } = useAuth();
@@ -8,7 +8,7 @@ const useConnect = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const handleRegister = useCallback(() => {
+  const goHome = useCallback(() => {
     push('/')
   }, [push]);
 
@@ -33,7 +33,7 @@ const useConnect = () => {
     isLoading,
     email,
     password,
-    handleRegister,
+    goHome,
     handleSubmit,
     handleChangeEmail,
     handleChangePassword,

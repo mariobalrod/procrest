@@ -2,11 +2,11 @@ import React from 'react'
 import '../styles.css'
 import Button from '../../../../components/Button';
 import Icon from '../../../../assets/IconLogo.svg'
-import useConnect from './connect';
+import useConnect from '../connect';
 
 const Login = (props) => {
   const {
-    handleRegister,
+    goHome,
   } = useConnect();
 
   return (
@@ -46,7 +46,7 @@ const Login = (props) => {
                 />
               </div>
               <div className="footer">
-                <button onClick={handleRegister} className="linkB">
+                <button onClick={goHome} className="linkB">
                   ¿No tienes cuenta?
                 </button>
                 <Button type="submit" text="Iniciar sesión" />
