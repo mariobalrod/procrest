@@ -1,6 +1,5 @@
 import React from "react";
 import useConnect from './connect';
-
 import './styles.css';
 
 const Landing = () => {
