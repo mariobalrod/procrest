@@ -1,8 +1,12 @@
 .container{
-    height: 404px;
-    width: 250px;
-    text-align: center;
+    max-width: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 .card-img-top{
+    width: 100%;
     border-radius: 25px;
+    height: 304.99px;
 }
