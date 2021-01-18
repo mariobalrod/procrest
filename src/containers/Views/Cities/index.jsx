@@ -1,7 +1,7 @@
 import React from "react";
 import './styles.css';
 import useConnect from './connect';
-import CardCity from '../../../components/CardCity'
+import CardCity from '../../../components/CardCity';
 
 const Cities = () => {
   const { cities, isLoading } = useConnect();
