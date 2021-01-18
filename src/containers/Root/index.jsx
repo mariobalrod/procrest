@@ -9,7 +9,13 @@ import Categories from '../Views/About';
 
 import Profile from '../Views/Profile';
 
+import useConnect from './connect';
+
 const Root = () => {
+  const { isLoading } = useConnect();
+
+  if (isLoading) return <>Loading...</>
+
   return (
     <>
       <Switch>
