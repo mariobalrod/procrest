@@ -1,0 +1,8 @@
+.container{
+    height: 404px;
+    width: 250px;
+    text-align: center;
+}
+.card-img-top{
+    border-radius: 25px;
+}
