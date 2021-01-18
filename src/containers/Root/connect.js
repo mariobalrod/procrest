@@ -2,7 +2,7 @@ import { useCallback, useState } from 'react';
 import useAuth from '../../data/hooks/useAuth';
 
 const useConnect = () => {
-  const { login, isLoading } = useAuth();
+  const { login, register, isLoading } = useAuth();
   const [emailL, setEmailL] = useState("");
   const [passwordL, setPasswordL] = useState("");
   const [emailR, setEmailR] = useState("");
@@ -27,14 +27,15 @@ const useConnect = () => {
   };
 
   const handleSubmitR = useCallback(() => {
-    login({
-      identifier: emailR,
+    register({
+      username: username,
+      email: emailR,
       password: passwordR,
     });
     setEmailR('');
     setPasswordR('');
     setUsername('');
-  }, [login, emailR, passwordR]);
+  }, [register, username, emailR, passwordR]);
 
   const handleChangeEmailR = (e) => {
     setEmailR(e.target.value);
