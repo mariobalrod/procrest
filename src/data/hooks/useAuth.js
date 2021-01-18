@@ -13,20 +13,50 @@ const loginReq = async (credenciales) => {
   }
 };
 
-const useAuth = () => {  
-  const { mutateAsync, isLoading } = useMutation(credenciales => loginReq(credenciales));
+const registerReq = async (credenciales) => {
+  try {
+    const { data } = await client.post(`/auth/local/register`, credenciales);
+
+    return data;
+  } catch (error) {
+    throw error;
+  }
+};
+
+const useAuth = () => {
+  const {
+    mutateAsync: loginMutation,
+    isLoading: isLoginLoading,
+  } = useMutation((credenciales) => loginReq(credenciales));
+  const {
+    mutateAsync: registerMutation,
+    isLoading: isRegisterLoading,
+  } = useMutation((credenciales) => registerReq(credenciales));
 
   const login = useCallback(
     async (credenciales) => {
-      const response = await mutateAsync(credenciales);
-      
+      const response = await loginMutation(credenciales);
+
       if (response && response.jwt && response.user) {
         setToken(response.jwt);
         setMe(JSON.stringify(response.user));
       }
       return response;
     },
-    [mutateAsync],
+    [loginMutation]
+  );
+
+  const register = useCallback(
+    async (credenciales) => {
+      const response = await registerMutation(credenciales);
+
+      if (response.data && response.data.jwt && response.data.user) {
+        setToken(response.data.jwt);
+        setMe(JSON.stringify(response.data.user));
+      }
+      return response;
+    },
+    [registerMutation]
   );
 
   const logout = useCallback(() => {
@@ -34,14 +64,15 @@ const useAuth = () => {
       removeToken();
       removeMe();
     } catch (error) {
-      console.log(error)
+      console.log(error);
     }
   }, []);
 
   return {
     login,
     logout,
-    isLoading,
+    register,
+    isLoading: isLoginLoading || isRegisterLoading,
   };
 };
 
