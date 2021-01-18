@@ -3,7 +3,7 @@ import useMe from '../../../data/hooks/useMe';
 const useConnect = () => {
     const { me, isLoading } = useMe();
 
-    const isAuth = me ? true : false;
+    const isAuth = !!me;
 
     return {
         isAuth,

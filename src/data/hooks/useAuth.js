@@ -21,10 +21,8 @@ const useAuth = () => {
       const response = await mutateAsync(credenciales);
       
       if (response && response.jwt && response.user) {
-        console.log(response.jwt)
-        console.log(response.user)
         setToken(response.jwt);
-        setMe(response.user);
+        setMe(JSON.stringify(response.user));
       }
       return response;
     },

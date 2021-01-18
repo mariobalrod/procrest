@@ -12,7 +12,7 @@ const Profile = () => {
     <Redirect to="/" />
   )
   return (
-    <div>{console.log(isAuth)}Profile</div>
+    <div>Profile</div>
   );
 };
 
