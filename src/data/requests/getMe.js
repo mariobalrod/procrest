@@ -3,10 +3,15 @@ import client from '../axiosClient';
 import normalizeUser from '../../models/User';
 
 const getMe = async () => {
-    console.log(JSON.parse(me()))
-    const { data } = await client.get(`/users/${JSON.parse(me()).id}`);
+    const prov = me();
+    const user = prov.json();
+    //console.log(JSON.parse(user))
+    if (user && user.id) {
+        const { data } = await client.get(`/users/${user.id}`);
+        return normalizeUser(data);
+    }
 
-    return normalizeUser(data);
+    return null;
 };
 
 export default getMe;

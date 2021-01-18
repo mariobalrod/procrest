@@ -1,5 +1,4 @@
 const normalizeUser = (data) => {
-    console.log(data)
     return {
         id: data.id,
         username: data.username,

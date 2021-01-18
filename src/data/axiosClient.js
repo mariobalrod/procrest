@@ -12,7 +12,7 @@ client.interceptors.request.use((config) => {
   const tokens = getToken();
 
   if (tokens) {
-    config.headers.Authorization = `Bearer ${JSON.parse(tokens)}`;
+    config.headers.Authorization = `Bearer ${tokens}`;
   } else {
     delete config.headers.Authorization;
   }

@@ -7,7 +7,7 @@ export const removeToken = () => localStorage.removeItem(TOKEN_KEY);
 
 export const setToken = (tokens) => localStorage.setItem(TOKEN_KEY, tokens);
 
-export const getMe = () => localStorage.getItem(ME_KEY) || '';
+export const getMe = () => localStorage.getItem(ME_KEY) || {};
 
 export const removeMe = () => localStorage.removeItem(ME_KEY);
 

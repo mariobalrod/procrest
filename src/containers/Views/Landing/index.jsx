@@ -16,8 +16,6 @@ const Landing = () => {
           login({ identifier: "admin@gmail.com", password: "Admin123" })
         }
         type="button"
-        data-bs-toggle="modal"
-        data-bs-target="#exampleModal"
         className="btn btn-primary"
       >
         Login
@@ -25,8 +23,6 @@ const Landing = () => {
       <button
         onClick={logout}
         type="button"
-        data-bs-toggle="modal"
-        data-bs-target="#exampleModal"
         className="btn btn-primary"
       >
         Logout
