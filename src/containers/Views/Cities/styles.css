@@ -1,0 +1,19 @@
+.containerCard {
+    max-width: 80rem;
+    margin: 97px auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+    grid-gap: 2rem;
+    margin-top: 1.5rem;
+    height: 100%;
+}
+
+#title {
+    text-align: center;
+    margin-top: 57px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 28px;
+    line-height: 33px;
+    color: #000000;
+}
