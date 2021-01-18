@@ -1,0 +1,28 @@
+#topBar{
+    background-color: #3f51f4;
+}
+#topBar img{
+    padding-left: 25px;
+}
+#navbarNav{
+   justify-content: flex-end;
+}
+
+#navbarNav a{
+    color: azure;
+    margin-right: 15px;
+}
+
+.botones li{
+    list-style: none;
+}
+.botones{
+    display: flex;
+}
+.botones button{
+    margin-left: 15px;
+}
+
+#botonLogin{
+    margin-right: 25px;
+}
