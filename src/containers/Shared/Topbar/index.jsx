@@ -1,7 +1,7 @@
 import React from "react";
 import logo from "../../../assets/logo.svg";
 import "./styles.css";
-import Button from "../../../components/Button";
+import Button from "../../../components/ButtonCustom";
 
 function TopBar(props) {
   return (
@@ -32,10 +32,10 @@ function TopBar(props) {
                 </ul>
                 <div className="botones " >
                     <li className="nav-item">
-                        <Button type="button" text= "Registro"/>
+                        <Button text= "Registro"/>
                     </li>
                     <li className="nav-item " id="botonLogin">
-                        <Button type="button" text= "login"/>
+                        <Button text= "login"/>
                     </li>
                 </div>
         </div>
