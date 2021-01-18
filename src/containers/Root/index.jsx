@@ -10,11 +10,19 @@ import Categories from '../Views/About';
 import Profile from '../Views/Profile';
 
 import useConnect from './connect';
+import { useLoading, ThreeDots } from '@agney/react-loading';
+import Loader from '../../components/Loader';
 
 const Root = () => {
   const { isLoading } = useConnect();
+  const { containerProps, indicatorEl } = useLoading({
+    loading: true,
+    indicator: <ThreeDots width="100" style={{ color: 'white' }} />,
+  });
 
-  if (isLoading) return <>Loading...</>
+  if (isLoading) {
+    return <Loader indicator={indicatorEl} containerProps={containerProps} />;
+  }
 
   return (
     <>
