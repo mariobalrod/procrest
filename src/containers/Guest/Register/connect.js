@@ -14,7 +14,10 @@ const useConnect = () => {
       username: username,
       email: email,
       password: password,
-    }).then(() => push('/profile'));
+    }).then(() => {
+      push('/');
+      window.location.reload();
+    });
     setEmail('');
     setPassword('');
     setUsername('');

@@ -12,7 +12,10 @@ const useConnect = () => {
     login({
       identifier: email,
       password: password,
-    }).then(() => push('/profile'));
+    }).then(() => {
+      push('/');
+      window.location.reload();
+    });
     setEmail('');
     setPassword('');
   }, [login, email, password, push]);
