@@ -1,13 +1,12 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import '../styles.css'
-import Button from '../../../../components/Button';
-import Icon from '../../../../assets/IconLogo.svg';
+import Button from '../../../components/Button';
+import Icon from '../../../assets/IconLogo.svg'
 import useConnect from '../connect';
 
 const Register = (props) => {
-  const {
-    goHome,
-  } = useConnect();
+  const {  } = useConnect();
 
   return (
     <div
@@ -56,9 +55,9 @@ const Register = (props) => {
                 />
               </div>
               <div className="footerModal">
-                <button onClick={goHome} className="linkB">
+                <Link to="/login" className="linkB">
                   ¿Tienes cuenta?
-                </button>
+                </Link>
                 <Button type="submit" text="Registrarse" />
               </div>
             </form>

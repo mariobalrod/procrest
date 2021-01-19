@@ -1,21 +1,15 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import '../styles.css'
-import Button from '../../../../components/Button';
-import Icon from '../../../../assets/IconLogo.svg'
+import Button from '../../../components/Button';
+import Icon from '../../../assets/IconLogo.svg'
 import useConnect from '../connect';
 
 const Login = (props) => {
-  const {
-    goHome,
-  } = useConnect();
+  const {} = useConnect();
 
   return (
-    <div
-      className="modal fade"
-      id="loginModal"
-      aria-labelledby="exampleModalLabel"
-      aria-hidden="true"
-    >
+    <div>
       <div className="modal-dialog">
         <div className="modal-content" style={{ width: "514px" }}>
           <div className="modal-body containerModal">
@@ -46,9 +40,9 @@ const Login = (props) => {
                 />
               </div>
               <div className="footerModal">
-                <button onClick={goHome} className="linkB">
+                <Link to="/register" className="linkB">
                   ¿No tienes cuenta?
-                </button>
+                </Link>
                 <Button type="submit" text="Iniciar sesión" />
               </div>
             </form>

@@ -1,9 +1,9 @@
 import React from "react";
 import { Link } from 'react-router-dom';
-import logo from "../../../assets/logo.svg";
+import logo from "../../assets/logo.svg";
 import "./styles.css";
-import Button from "../../../components/ButtonCustom";
-import Avatar from "../../../components/Avatar";
+import Button from "../../components/ButtonCustom";
+import Avatar from "../../components/Avatar";
 
 function TopBar(props) {
   return (
