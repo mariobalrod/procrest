@@ -57,10 +57,10 @@ function TopBar(props) {
         ) : (
           <div className="botones ">
             <li className="nav-item" data-bs-toggle="modal" data-bs-target="#registerModal">
-              <Button text="Registro" />
+              <Button text="Registro" to="/register" />
             </li>
             <li className="nav-item " id="botonLogin" data-bs-toggle="modal" data-bs-target="#loginModal">
-              <Button text="Login" />
+              <Button text="Login" to="/login" />
             </li>
           </div>
         )}

@@ -24,7 +24,7 @@ const Login = () => {
   if (isLoading) return <Loader indicator={indicatorEl} containerProps={containerProps} />;
 
   return (
-    <div>
+    <div className="back">
       <div className="modal-dialog">
         <div className="modal-content" style={{ width: "514px" }}>
           <div className="modal-body containerModal">

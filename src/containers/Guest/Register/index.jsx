@@ -26,12 +26,7 @@ const Register = () => {
   if (isLoading) return <Loader indicator={indicatorEl} containerProps={containerProps} />;
 
   return (
-    <div
-      className="modal fade"
-      id="registerModal"
-      aria-labelledby="exampleModalLabel"
-      aria-hidden="true"
-    >
+    <div className="back">
       <div className="modal-dialog">
         <div className="modal-content" style={{ width: "514px" }}>
           <div className="modal-body containerModal">
