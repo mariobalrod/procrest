@@ -5,7 +5,7 @@ import carrusel2 from '../../assets/carrusel/carrusel2.jpg';
 import carrusel3 from '../../assets/carrusel/carrusel3.jpg';
 import carrusel4 from '../../assets/carrusel/carrusel4.jpg';
 
-function Carrusel(props) {
+function Carrusel() {
     return (
         <div id="carouselExampleIndicators" className="carousel slide" data-ride="carousel">
             <ol className="carousel-indicators">
@@ -16,26 +16,26 @@ function Carrusel(props) {
             </ol>
             <div className="carousel-inner ">
                 <div className="carousel-item active ">
-                <a href="#"><img className="d-block w-100" src={carrusel1} alt="Second slide" /></a>
+                <img className="d-block w-100" src={carrusel1} alt="Second slide" />
                     <div className="carousel-caption d-none d-md-block" id="texto">
                         <p id="titulo">Top apartamentos del mes</p>
 
                     </div>
                 </div>
                 <div className="carousel-item ">
-                   <a href="#"><img className="d-block w-100" src={carrusel2} alt="Second slide" /></a>
+                   <img className="d-block w-100" src={carrusel2} alt="Second slide" />
                     <div className="carousel-caption d-none d-md-block">
                         <p id="titulo">Top apartamentos del mes</p>
                     </div>
                 </div>
                 <div className="carousel-item ">
-                <a href="#"><img className="d-block w-100" src={carrusel3} alt="Second slide" /></a>
+                <img className="d-block w-100" src={carrusel3} alt="Second slide" />
                     <div className="carousel-caption d-none d-md-block">
                         <p id="titulo">Top apartamentos del mes</p>
                     </div>
                 </div>
                 <div className="carousel-item ">
-                <a href="#"><img className="d-block w-100" src={carrusel4} alt="Second slide" /></a>
+                <img className="d-block w-100" src={carrusel4} alt="Second slide" />
                     <div className="carousel-caption d-none d-md-block">
                         <p id="titulo">Top apartamentos del mes</p>
                     </div>
