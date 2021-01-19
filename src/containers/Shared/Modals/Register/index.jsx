@@ -19,9 +19,9 @@ const Register = (props) => {
       <div className="modal-dialog">
         <div className="modal-content" style={{ width: "514px" }}>
           <div className="modal-body containerModal">
-            <div className="header">
-              <img src={Icon} alt="iconLogo" className="icon" />
-              <h1 className="title">Registro</h1>
+            <div className="headerModal">
+              <img src={Icon} alt="iconLogo" className="iconModal" />
+              <h1 className="titleModal">Registro</h1>
             </div>
             <form
               style={{ width: "100%", marginTop: "60px" }}
@@ -55,7 +55,7 @@ const Register = (props) => {
                   onChange={props.handleChangePassword}
                 />
               </div>
-              <div className="footer">
+              <div className="footerModal">
                 <button onClick={goHome} className="linkB">
                   ¿Tienes cuenta?
                 </button>

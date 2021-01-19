@@ -19,9 +19,9 @@ const Login = (props) => {
       <div className="modal-dialog">
         <div className="modal-content" style={{ width: "514px" }}>
           <div className="modal-body containerModal">
-            <div className="header">
-              <img src={Icon} alt="iconLogo" className="icon" />
-              <h1 className="title">Inicio de sesión</h1>
+            <div className="headerModal">
+              <img src={Icon} alt="iconLogo" className="iconModal" />
+              <h1 className="titleModal">Inicio de sesión</h1>
             </div>
             <form style={{ width: "100%", marginTop: "60px" }} onSubmit={props.handleSubmit}>
               <div className="mb-4">
@@ -45,7 +45,7 @@ const Login = (props) => {
                   onChange={props.handleChangePassword}
                 />
               </div>
-              <div className="footer">
+              <div className="footerModal">
                 <button onClick={goHome} className="linkB">
                   ¿No tienes cuenta?
                 </button>
