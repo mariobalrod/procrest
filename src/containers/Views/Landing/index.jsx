@@ -2,6 +2,8 @@ import React from "react";
 import useConnect from './connect';
 import './styles.css';
 
+import Carrusel from "../../../components/Carrusel"
+
 const Landing = () => {
   const { isLoading, login, logout } = useConnect();
 
@@ -25,7 +27,7 @@ const Landing = () => {
         className="btn btn-primary"
       >
         Logout
-      </button>
+      </button> 
     </div>
   );
 };
