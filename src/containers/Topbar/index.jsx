@@ -1,4 +1,4 @@
-import React from "react";
+import { memo } from "react";
 import { Link } from 'react-router-dom';
 import logo from "../../assets/logo.svg";
 import "./styles.css";
@@ -69,4 +69,4 @@ function TopBar(props) {
   );
 }
 
-export default TopBar;
+export default memo(TopBar);
