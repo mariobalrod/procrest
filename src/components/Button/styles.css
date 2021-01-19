@@ -1,4 +1,4 @@
-.boton{
+.botonN{
     background-color: #7749F8;
     border: 0px;
     border-radius: 6px;
@@ -6,6 +6,6 @@
     padding: 5px 15px;
 }
 
-.boton:hover{
+.botonN:hover{
     background-color: #8d64ff;
 }

@@ -1,4 +1,4 @@
-.containerCard {
+.containerCards {
     max-width: 80rem;
     margin: 97px auto;
     display: grid;
@@ -8,7 +8,7 @@
     height: 100%;
 }
 
-#title {
+#titleCity {
     text-align: center;
     margin-top: 57px;
     font-style: normal;

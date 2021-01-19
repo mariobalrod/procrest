@@ -13,22 +13,26 @@ import useConnect from './connect';
 import { useLoading, ThreeDots } from '@agney/react-loading';
 import Loader from '../../components/Loader';
 import Topbar from '../Shared/Topbar';   
+import Login from '../Shared/Modals/Login';   
+import Register from '../Shared/Modals/Register';   
 import Footer from '../../components/Footer';
 
 const Root = () => {
-  const { isLoading } = useConnect();
+  const { isLoading, me } = useConnect();
   const { containerProps, indicatorEl } = useLoading({
     loading: true,
     indicator: <ThreeDots width="100" style={{ color: 'white' }} />,
   });
 
-  if (isLoading) {
-    return <Loader indicator={indicatorEl} containerProps={containerProps} />;
-  }
+  if (isLoading) return <Loader indicator={indicatorEl} containerProps={containerProps} />;
+  
 
   return (
     <>
-      <Topbar/>
+      <Topbar user={me} />
+      <Register />
+      <Login />
+
       <Switch>
         <Route component={Landing} exact path="/" />
         <Route component={Cities} exact path="/cities" />
@@ -38,7 +42,8 @@ const Root = () => {
         <Route component={Profile} exact path="/profile" />
 
         <Redirect to="/" />
-      </Switch>
+      </Switch> 
+      
       <Footer/>
     </>
   );
