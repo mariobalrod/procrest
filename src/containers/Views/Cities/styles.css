@@ -17,3 +17,25 @@
     line-height: 33px;
     color: #000000;
 }
+
+#sevilla{
+    width: 1855px;
+    height: 600px;
+    margin-left: 0px;
+}
+
+/*  RESPONSIVE TABLET */
+@media (max-width:1030px){
+    #sevilla{
+        width: 1030px;
+    }
+
+}
+
+/* RESPONSIVE MOVIL */
+@media (max-width: 900px){
+    #sevilla{
+        width: 411px;
+        height: 400px;
+    }
+}

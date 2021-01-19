@@ -1,0 +1,29 @@
+#buscador{
+    width: 539px;
+    height: 37px;
+
+    margin-left: 680px;
+    margin-right: 450px;
+
+    margin-top: 30px;
+    margin-bottom: 85px;
+}
+#iconoSearcher{
+    height: 30px;
+    width: 30px;
+}
+
+/* RESPONSIVE TABLET */
+@media (max-width:1030px){
+    #buscador{
+        margin-left: 250px;
+    }
+}
+
+/* RESPONSIVE MOVIL */
+@media (max-width: 900px){
+    #buscador{
+        width: 300px;
+        margin-left: 50px;
+    }
+}
