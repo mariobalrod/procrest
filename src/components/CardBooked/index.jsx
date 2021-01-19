@@ -1,9 +1,8 @@
 import React from "react";
-import Button from "../Button"
 
-const CardApartment= (props) => {
+const CardBooked= (props) => {
   return (
-    <div className="cardapartment" style={{ width: "250px"}}>
+    <div className="cardbooked" style={{ width: "250px"}}>
       <div
         style={{
           background: `url(${props.image}) no-repeat`,
@@ -55,10 +54,10 @@ const CardApartment= (props) => {
           </div>
         </div>
         <p className="card-text">{props.description}</p>
-        <Button type="button" text="Reservar" />
       </div>
     </div>
   );
 };
 
-export default CardApartment;
+export default CardBooked;
+
