@@ -4,7 +4,7 @@ import "./styles.css";
 const Button = (props) => {
   return (
     <button
-      className="btn btn-primary boton"
+      className="btn btn-primary botonN"
       type={props.type}
     >
       {props.text}

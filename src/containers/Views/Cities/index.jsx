@@ -18,8 +18,8 @@ const Cities = () => {
 
   return (
     <div className="cities">
-      <h1 id="title">Encuentre su ciudad</h1>
-      <div className="containerCard">
+      <h1 id="titleCity">Encuentre su ciudad</h1>
+      <div className="containerCards">
         {cities.map((city) => (
           <CardCity key={city.id} cityimage={city.image} citytext={city.name} />
         ))}

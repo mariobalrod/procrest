@@ -1,8 +1,10 @@
 import { useCallback, useState } from 'react';
 import useAuth from '../../data/hooks/useAuth';
+import useMe from '../../data/hooks/useMe';
 
 const useConnect = () => {
-  const { login, register, isLoading } = useAuth();
+  const { login, register, isLoading: authLoading } = useAuth();
+  const { me, isLoading: meLoading } = useMe();
   const [emailL, setEmailL] = useState("");
   const [passwordL, setPasswordL] = useState("");
   const [emailR, setEmailR] = useState("");
@@ -50,7 +52,7 @@ const useConnect = () => {
   };
 
   return {
-    isLoading,
+    isLoading: meLoading || authLoading,
     emailL,
     passwordL,
     handleSubmitL,
@@ -63,6 +65,7 @@ const useConnect = () => {
     handleChangeEmailR,
     handleChangePasswordR,
     handleChangeUsername,
+    me,
   };
 }
 

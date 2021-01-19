@@ -1,9 +1,13 @@
-.boton{
-position: absolute;
-width: 128px;
-height: 38px;
-background-color:#3F51F4;
-color: white;
-border: 1px solid #d0d0d0;
-border-radius: 20px;
+.outline{
+    width: 128px;
+    height: 38px;
+    background-color:#3F51F4;
+    color: white;
+    border: 1px solid #d0d0d0;
+    border-radius: 20px;
+    outline: none;
+}
+
+.outline:focus {
+    outline: none;
 }
