@@ -25,7 +25,7 @@ const Landing = () => {
         className="btn btn-primary"
       >
         Logout
-      </button>
+      </button> 
     </div>
   );
 };

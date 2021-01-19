@@ -1,9 +1,13 @@
 import React from "react";
 import './styles.css';
+import Carrusel from '../../../components/Carrusel';
 
 const Apartments = () => {
   return (
-    <div>Apartments</div>
+    <div>
+      <Carrusel />
+      Apartments
+    </div>
   );
 };
 

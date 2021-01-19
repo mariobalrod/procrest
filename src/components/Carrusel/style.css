@@ -1,0 +1,14 @@
+#titulo{
+    font-size: larger;
+   font-weight: 700;
+}
+
+.carousel-caption{
+    background-color: #7749f8;
+    border-radius: 50px;
+    opacity: 80%;
+    width: 50%;
+    height: 9%;
+    margin-left: 190px;
+}
+
