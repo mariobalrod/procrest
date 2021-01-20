@@ -1,6 +1,9 @@
 import React from 'react';
 import { Redirect, Route, Switch } from 'react-router-dom';
 
+import Login from '../Guest/Login';
+import Register from '../Guest/Register';
+
 import Landing from '../Views/Landing';
 import About from '../Views/About';
 import Apartments from '../Views/Apartments';
@@ -12,9 +15,7 @@ import Profile from '../Views/Profile';
 import useConnect from './connect';
 import { useLoading, ThreeDots } from '@agney/react-loading';
 import Loader from '../../components/Loader';
-import Topbar from '../Shared/Topbar';   
-import Login from '../Shared/Modals/Login';   
-import Register from '../Shared/Modals/Register';   
+import Topbar from '../Topbar';  
 import Footer from '../../components/Footer';
 
 const Root = () => {
@@ -30,10 +31,11 @@ const Root = () => {
   return (
     <>
       <Topbar user={me} />
-      <Register />
-      <Login />
 
       <Switch>
+        <Route component={Register} exact path="/register" />
+        <Route component={Login} exact path="/login" />
+
         <Route component={Landing} exact path="/" />
         <Route component={Cities} exact path="/cities" />
         <Route component={About} exact path="/about" />

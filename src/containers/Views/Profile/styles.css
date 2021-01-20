@@ -1,0 +1,17 @@
+.logout {
+    border: none;
+    outline: none;
+    background: none;
+    cursor: pointer;
+}
+
+.logout:focus {
+    border: none;
+    outline: none;
+    background: none;
+    cursor: pointer;
+}
+
+.logout:hover img{
+    opacity: 0.7;
+}

@@ -1,21 +1,30 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import '../styles.css'
-import Button from '../../../../components/Button';
-import Icon from '../../../../assets/IconLogo.svg'
-import useConnect from '../connect';
+import Button from '../../../components/Button';
+import Icon from '../../../assets/IconLogo.svg'
+import useConnect from './connect';
+import { useLoading, ThreeDots } from '@agney/react-loading';
+import Loader from '../../../components/Loader';
 
-const Login = (props) => {
+const Login = () => {
   const {
-    goHome,
+    isLoading,
+    email,
+    password,
+    handleSubmit,
+    handleChangeEmail,
+    handleChangePassword,
   } = useConnect();
+  const { containerProps, indicatorEl } = useLoading({
+    loading: true,
+    indicator: <ThreeDots width="100" style={{ color: 'white' }} />,
+  });
+
+  if (isLoading) return <Loader indicator={indicatorEl} containerProps={containerProps} />;
 
   return (
-    <div
-      className="modal fade"
-      id="loginModal"
-      aria-labelledby="exampleModalLabel"
-      aria-hidden="true"
-    >
+    <div className="back">
       <div className="modal-dialog">
         <div className="modal-content" style={{ width: "514px" }}>
           <div className="modal-body containerModal">
@@ -23,7 +32,7 @@ const Login = (props) => {
               <img src={Icon} alt="iconLogo" className="iconModal" />
               <h1 className="titleModal">Inicio de sesión</h1>
             </div>
-            <form style={{ width: "100%", marginTop: "60px" }} onSubmit={props.handleSubmit}>
+            <form style={{ width: "100%", marginTop: "60px" }} onSubmit={handleSubmit}>
               <div className="mb-4">
                 <input
                   placeholder="Email"
@@ -31,8 +40,8 @@ const Login = (props) => {
                   className="form-control"
                   id="exampleInputEmail1"
                   aria-describedby="emailHelp"
-                  value={props.email}
-                  onChange={props.handleChangeEmail}
+                  value={email}
+                  onChange={handleChangeEmail}
                 />
               </div>
               <div className="mb-3">
@@ -41,14 +50,14 @@ const Login = (props) => {
                   type="password"
                   className="form-control"
                   id="exampleInputPassword1"
-                  value={props.password}
-                  onChange={props.handleChangePassword}
+                  value={password}
+                  onChange={handleChangePassword}
                 />
               </div>
               <div className="footerModal">
-                <button onClick={goHome} className="linkB">
+                <Link to="/register" className="linkB">
                   ¿No tienes cuenta?
-                </button>
+                </Link>
                 <Button type="submit" text="Iniciar sesión" />
               </div>
             </form>

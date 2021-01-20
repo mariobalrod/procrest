@@ -5,6 +5,8 @@
   "dependencies": {
     "@agney/react-loading": "^0.1.2",
     "axios": "^0.21.1",
+    "bootstrap": "^4.6.0",
+    "jquery": "^3.5.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-query": "^3.5.12",

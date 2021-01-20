@@ -1,21 +1,32 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import '../styles.css'
-import Button from '../../../../components/Button';
-import Icon from '../../../../assets/IconLogo.svg';
-import useConnect from '../connect';
+import Button from '../../../components/Button';
+import Icon from '../../../assets/IconLogo.svg'
+import useConnect from './connect';
+import { useLoading, ThreeDots } from '@agney/react-loading';
+import Loader from '../../../components/Loader';
 
-const Register = (props) => {
+const Register = () => {
   const {
-    goHome,
+    isLoading,
+    email,
+    password,
+    username,
+    handleSubmit,
+    handleChangeEmail,
+    handleChangePassword,
+    handleChangeUsername,
   } = useConnect();
+  const { containerProps, indicatorEl } = useLoading({
+    loading: true,
+    indicator: <ThreeDots width="100" style={{ color: 'white' }} />,
+  });
+
+  if (isLoading) return <Loader indicator={indicatorEl} containerProps={containerProps} />;
 
   return (
-    <div
-      className="modal fade"
-      id="registerModal"
-      aria-labelledby="exampleModalLabel"
-      aria-hidden="true"
-    >
+    <div className="back">
       <div className="modal-dialog">
         <div className="modal-content" style={{ width: "514px" }}>
           <div className="modal-body containerModal">
@@ -25,15 +36,15 @@ const Register = (props) => {
             </div>
             <form
               style={{ width: "100%", marginTop: "60px" }}
-              onSubmit={props.handleSubmit}
+              onSubmit={handleSubmit}
             >
                <div className="mb-4">
                 <input
                   placeholder="Nombre de usuario"
                   type="text"
                   className="form-control"
-                  value={props.username}
-                  onChange={props.handleChangeUsername}
+                  value={username}
+                  onChange={handleChangeUsername}
                 />
               </div>
               <div className="mb-4">
@@ -42,8 +53,8 @@ const Register = (props) => {
                   type="email"
                   className="form-control"
                   aria-describedby="emailHelp"
-                  value={props.email}
-                  onChange={props.handleChangeEmail}
+                  value={email}
+                  onChange={handleChangeEmail}
                 />
               </div>
               <div className="mb-3">
@@ -51,14 +62,14 @@ const Register = (props) => {
                   placeholder="Contraseña"
                   type="password"
                   className="form-control"
-                  value={props.password}
-                  onChange={props.handleChangePassword}
+                  value={password}
+                  onChange={handleChangePassword}
                 />
               </div>
               <div className="footerModal">
-                <button onClick={goHome} className="linkB">
+                <Link to="/login" className="linkB">
                   ¿Tienes cuenta?
-                </button>
+                </Link>
                 <Button type="submit" text="Registrarse" />
               </div>
             </form>
