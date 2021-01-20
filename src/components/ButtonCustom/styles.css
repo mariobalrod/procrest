@@ -3,9 +3,11 @@
     height: 38px;
     background-color:#3F51F4;
     color: white;
-    border: 1px solid #d0d0d0;
+    border: 2px solid #d0d0d0;
     border-radius: 20px;
     outline: none;
+    text-decoration: none;
+    padding: 10px 20px;
 }
 
 .outline:focus {

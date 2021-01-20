@@ -49,10 +49,9 @@ const useAuth = () => {
   const register = useCallback(
     async (credenciales) => {
       const response = await registerMutation(credenciales);
-
-      if (response.data && response.data.jwt && response.data.user) {
-        setToken(response.data.jwt);
-        setMe(JSON.stringify(response.data.user));
+      if (response.jwt && response.user) {
+        setToken(response.jwt);
+        setMe(JSON.stringify(response.user));
       }
       return response;
     },

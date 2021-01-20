@@ -1,9 +1,9 @@
-import React from "react";
+import { memo } from "react";
 import { Link } from 'react-router-dom';
-import logo from "../../../assets/logo.svg";
+import logo from "../../assets/logo.svg";
 import "./styles.css";
-import Button from "../../../components/ButtonCustom";
-import Avatar from "../../../components/Avatar";
+import Button from "../../components/ButtonCustom";
+import Avatar from "../../components/Avatar";
 
 function TopBar(props) {
   return (
@@ -57,10 +57,10 @@ function TopBar(props) {
         ) : (
           <div className="botones ">
             <li className="nav-item" data-bs-toggle="modal" data-bs-target="#registerModal">
-              <Button text="Registro" />
+              <Button text="Registro" to="/register" />
             </li>
             <li className="nav-item " id="botonLogin" data-bs-toggle="modal" data-bs-target="#loginModal">
-              <Button text="Login" />
+              <Button text="Login" to="/login" />
             </li>
           </div>
         )}
@@ -69,4 +69,4 @@ function TopBar(props) {
   );
 }
 
-export default TopBar;
+export default memo(TopBar);
