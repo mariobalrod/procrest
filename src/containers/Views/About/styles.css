@@ -1,0 +1,70 @@
+.thumAbout{
+    background: url('../../../assets/aboutUs.jpg') no-repeat center center;
+    background-size: cover;
+    width: 100%;
+    height: 482px;
+}
+
+#contenedorTodo{
+    align-items: center;
+    text-align: center;
+
+    margin-top: 100px;
+}
+
+#sobreNosotros{
+    margin-bottom: 100px;
+}
+#sobreNosotros p{
+    font-size: medium;
+    margin-top: 25px;
+}
+
+#fundadores{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    margin-bottom: 35px;
+}
+#fundadores h3{
+    margin-top: 20px;
+}
+
+#sergio{
+    margin-right: 50px;
+    margin-top: 30px;
+}
+
+#mario{
+    margin-right: 30px;
+    margin-top: 30px;
+}
+
+#esperanza{
+    margin-top: 30px;
+}
+
+#contacto{
+    margin-top: 100px;
+    margin-bottom: 50px; 
+}
+
+#contacto p{
+    margin-top: 30px;
+    margin-bottom: 50px;
+
+    font-size: medium;
+}
+
+#contacto h4{
+    color: #3f51f4;
+}
+
+/*  RESPONSIVE TABLET */
+@media (max-width:900px){
+    #fundadores{
+        display: block;
+    }
+}

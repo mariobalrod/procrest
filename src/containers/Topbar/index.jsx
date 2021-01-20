@@ -23,7 +23,7 @@ function TopBar(props) {
         <span className="navbar-toggler-icon"></span>
       </button>
 
-      <div className="collapse navbar-collapse ml-auto" id="navbarNav">
+      <div className="collapse navbar-collapse ml-auto text-center " id="navbarNav">
         <ul className="navbar-nav ">
           <li className="nav-item active">
             <Link className="nav-link" to="/">
@@ -55,7 +55,7 @@ function TopBar(props) {
         {props.user ? (
           <Avatar username={props.user.username} />
         ) : (
-          <div className="botones ">
+          <div className="botones flex-row justify-content-center mt-3 mb-3 ml-4">
             <li className="nav-item" data-bs-toggle="modal" data-bs-target="#registerModal">
               <Button text="Registro" to="/register" />
             </li>
