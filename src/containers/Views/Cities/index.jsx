@@ -5,7 +5,6 @@ import CardCity from '../../../components/CardCity'
 import { useLoading, ThreeDots } from '@agney/react-loading';
 import Loader from '../../../components/Loader';
 import Searcher from '../../../components/Searcher'
-import Fondo from '../../../assets/fondoCiudad.jpg'
 
 const Cities = () => {
   const { cities, isLoading } = useConnect();
@@ -20,7 +19,7 @@ const Cities = () => {
 
   return (
     <div className="cities">
-      <img src={Fondo} alt="sevilla" srcset="" id="sevilla"/>
+      <div className="thumCity"/>
       <h1 id="titleCity">Encuentre su ciudad</h1>
       <Searcher />
       <div className="containerCards">
