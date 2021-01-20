@@ -2,9 +2,10 @@ import React from "react";
 import './styles.css';
 import useConnect from './connect';
 import { Redirect } from "react-router-dom";
+import LogoutIcon from '../../../assets/logOut.svg';
 
 const Profile = () => {
-  const { isAuth, isLoading } = useConnect();
+  const { isAuth, isLoading, handleLogout } = useConnect();
 
   if (isLoading) return <>Loading...</>
 
@@ -12,7 +13,13 @@ const Profile = () => {
     <Redirect to="/" />
   )
   return (
-    <div>Profile</div>
+    <div>
+      Profile
+      <button className="logout" onClick={handleLogout}>
+        <img src={LogoutIcon} alt="logout"/>
+      </button>
+
+    </div>
   );
 };
 
