@@ -1,0 +1,17 @@
+#titleCategory {
+    text-align: center;
+    font-size: xx-large;
+
+    margin-top: 80px;
+    margin-bottom: 50px;
+}
+
+.categoriesContainer {
+    max-width: 80rem;
+    margin: 97px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    height: 100%;
+}

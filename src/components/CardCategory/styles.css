@@ -1,0 +1,42 @@
+.cardCategory {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 500px;
+    height: 400px;
+    margin: 50px;
+    border: 1px solid gainsboro;
+    border-radius: 15px;
+}
+
+.contentCat {
+    max-width: 290px;
+    padding: 20px;
+}
+
+.contentCat p {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 6;
+    -webkit-box-orient: vertical;
+}
+
+/*  RESPONSIVE TABLET */
+@media (max-width:1030px){
+    .cardCategory {
+        flex-direction: column;
+        max-width: 250px;
+        height: 420px;
+        justify-content: center;
+    }
+
+    .contentCat {
+        height: 500px;
+    }
+
+    .imageCat {
+        border-radius: 15px;
+        max-height: 200px;
+    }
+}
