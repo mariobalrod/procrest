@@ -22,7 +22,7 @@ function Carrusel() {
       <div className="carousel-inner ">
         <div className="carousel-item ">
           <img className="d-block w-100" src={carrusel1} alt="Second slide" />
-          <div class="carousel-caption d-none d-md-block my-auto">
+          <div className="carousel-caption d-none d-md-block my-auto">
             <h5>Descubre nuestras categorias</h5>
             <p>Próximamente ofreceremos una mayor variedad de categorias</p>
             <img src={Icon} alt="iconDown" style={{ color: "white" }} />
@@ -30,7 +30,7 @@ function Carrusel() {
         </div>
         <div className="carousel-item ">
           <img className="d-block w-100" src={carrusel2} alt="Second slide" />
-          <div class="carousel-caption d-none d-md-block my-auto">
+          <div className="carousel-caption d-none d-md-block my-auto">
             <h5>Descubre nuestras categorias</h5>
             <p>Próximamente ofreceremos una mayor variedad de categorias</p>
             <img src={Icon} alt="iconDown" style={{ color: "white" }} />
@@ -38,7 +38,7 @@ function Carrusel() {
         </div>
         <div className="carousel-item ">
           <img className="d-block w-100" src={carrusel3} alt="Second slide" />
-          <div class="carousel-caption d-none d-md-block my-auto">
+          <div className="carousel-caption d-none d-md-block my-auto">
             <h5>Descubre nuestras categorias</h5>
             <p>Próximamente ofreceremos una mayor variedad de categorias</p>
             <img src={Icon} alt="iconDown" style={{ color: "white" }} />
@@ -46,7 +46,7 @@ function Carrusel() {
         </div>
         <div className="carousel-item active">
           <img className="d-block w-100" src={carrusel4} alt="Second slide" />
-          <div class="carousel-caption d-none d-md-block my-auto">
+          <div className="carousel-caption d-none d-md-block my-auto">
             <h5>Descubre nuestras categorias</h5>
             <p>Próximamente ofreceremos una mayor variedad de categorias</p>
             <img src={Icon} alt="iconDown" style={{ color: "white" }} />
