@@ -1,25 +1,11 @@
 .card{
     width: 500px;
-    float: left;
-    
-    margin-right: 50px;
-    margin-left: 50px;
-    margin-top: 50px;
-    margin-bottom: 50px;
+    margin: 50px;
 }
 
 /*  RESPONSIVE TABLET */
 @media (max-width:1030px){
     .card{
-        margin-left: 250px;
-        margin-bottom: 100px;
+        max-width: 250px;
     }
-}
-
-/* RESPONSIVE MOVIL */
-@media (max-width: 900px){
-    .card{
-        width: 250px;
-        margin-left: 55px;
-    }   
 }

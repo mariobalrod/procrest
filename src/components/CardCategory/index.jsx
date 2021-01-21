@@ -9,7 +9,7 @@ function CardCategory(props) {
             <div className="card" >
                 <div className="row no-gutters">
                     <div className="col-sm-5">
-                        <div className={props.imagen}></div>
+                        <div style={{background: `url(${props.image}) no-repeat`, backgroundSize: 'cover'}}></div>
                     </div>
                     <div className="col-sm-7">
                         <div className="card-body">
