@@ -24,6 +24,13 @@
     -webkit-line-clamp: 6;
     -webkit-box-orient: vertical;
 }
+.card-title{
+    margin-top: 20px;
+}
+
+.card-text{
+    margin-top: 20px;
+}
 
 /*  RESPONSIVE TABLET */
 @media (max-width:1030px){
