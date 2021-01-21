@@ -20,7 +20,7 @@ const Cities = () => {
   return (
     <div className="cities">
       <div className="thumCity">
-        <h1 class="presen">Encuentre su ciudad</h1>
+        <h1 className="presen">Encuentre su ciudad</h1>
       </div>
       <Searcher />
       <div className="containerCards">

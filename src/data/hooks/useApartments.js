@@ -1,9 +1,11 @@
 import { useQuery } from 'react-query';
 import client from '../axiosClient';
 
-const apartmentsReq = async () => {
+const apartmentsReq = async (params) => {
   try {
-    const { data } = await client.get(`/apartments`);
+    const param = params.queryKey[1];
+    
+    const { data } = await client.get(`/apartments${param}`);
 
     return data;
   } catch (error) {
@@ -11,8 +13,8 @@ const apartmentsReq = async () => {
   }
 };
 
-const useApartments = () => {  
-  const { data: apartments, isLoading } = useQuery('apartments', apartmentsReq);
+const useApartments = (filter) => {  
+  const { data: apartments, isLoading } = useQuery(['apartments', filter], apartmentsReq);
 
   return {
     apartments,
