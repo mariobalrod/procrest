@@ -19,8 +19,9 @@ const Cities = () => {
 
   return (
     <div className="cities">
-      <div className="thumCity"/>
-      <h1 id="titleCity">Encuentre su ciudad</h1>
+      <div className="thumCity">
+        <h1 class="presen">Encuentre su ciudad</h1>
+      </div>
       <Searcher />
       <div className="containerCards">
         {cities.map((city) => (

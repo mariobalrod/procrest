@@ -8,7 +8,7 @@ function Searcher() {
         <div className="input-group" id="buscador">
             <input type="search" className="form-control rounded" placeholder="Search" aria-label="Search"
                 aria-describedby="search-addon" />
-            <button type="button" className="btn btn-outline-primary"><img id="iconoSearcher" src={Icono} alt="" srcset=""/></button>
+            <button type="button" className="btn btn-outline-primary"><img id="iconoSearcher" src={Icono} alt="searchIcon"/></button>
         </div>
     )
 }

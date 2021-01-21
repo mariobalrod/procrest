@@ -6,7 +6,6 @@ import './styles.css'
 function CardCategory(props) {
   return (
     <div className="cardCategory">
-        {console.log(props.image)}
         <div
           className="imageCat"
           style={{
