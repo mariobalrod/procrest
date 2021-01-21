@@ -24,26 +24,33 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    text-align: center;
-
-    margin-bottom: 35px;
+    flex-wrap: wrap;
 }
+
 #fundadores h3{
     margin-top: 20px;
+    text-align: center;
 }
 
 #sergio{
-    margin-right: 50px;
-    margin-top: 30px;
+    margin: 30px;
+    position: relative;
+    max-width: 240px;
+    height: 331px;
 }
 
 #mario{
-    margin-right: 30px;
-    margin-top: 30px;
+    margin: 30px;
+    position: relative;
+    max-width: 240px;
+    height: 331px;
 }
 
 #esperanza{
-    margin-top: 30px;
+    margin: 30px;
+    position: relative;
+    max-width: 240px;    
+    height: 331px;
 }
 
 #contacto{
@@ -64,7 +71,4 @@
 
 /*  RESPONSIVE TABLET */
 @media (max-width:900px){
-    #fundadores{
-        display: block;
-    }
 }
