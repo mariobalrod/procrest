@@ -25,7 +25,7 @@ const Cities = () => {
       <Searcher />
       <div className="containerCards">
         {cities.map((city) => (
-          <CardCity key={city.id} cityimage={city.image} citytext={city.name} />
+          <CardCity key={city.id} id={city.id} cityimage={city.image} citytext={city.name} />
         ))}
       </div>
     </div>
