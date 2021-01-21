@@ -8,7 +8,7 @@ import Landing from '../Views/Landing';
 import About from '../Views/About';
 import Apartments from '../Views/Apartments';
 import Cities from '../Views/Cities';
-import Categories from '../Views/About';
+import Categories from '../Views/Categories';
 
 import Profile from '../Views/Profile';
 
