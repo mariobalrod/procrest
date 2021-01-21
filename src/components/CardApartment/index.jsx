@@ -1,9 +1,22 @@
 import React from "react";
 import Button from "../Button"
+import './styles.css';
 
-const CardApartment= (props) => {
+const CardApartment = (props) => {
   return (
-    <div className="cardapartment" style={{ width: "250px"}}>
+    <div
+      className="rootApart"
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        maxWidth: "250px",
+        margin: "20px",
+        borderLeft: "1px solid gainsboro",
+        borderRight: "1px solid gainsboro",
+        borderBottom: "1px solid gainsboro",
+        borderRadius: "25px",
+      }}
+    >
       <div
         style={{
           background: `url(${props.image}) no-repeat`,
@@ -17,11 +30,13 @@ const CardApartment= (props) => {
             display: "flex",
             justifyContent: "space-between",
             alignItems: "center",
-            marginBottom:'10px'
+            marginBottom: "10px",
           }}
         >
-          <h5 className="card-title" style={{marginBottom:'0'}}>{props.name}</h5>
-          <div style={{marginBottom:'5px'}}>
+          <h5 className="card-title" style={{ marginBottom: "0" }}>
+            {props.name}
+          </h5>
+          <div style={{ marginBottom: "5px" }}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="16"
@@ -54,7 +69,7 @@ const CardApartment= (props) => {
             </svg>
           </div>
         </div>
-        <p className="card-text">{props.description}</p>
+        <p className="card-text paragraphAp">{props.description}</p>
         <Button type="button" text="Reservar" />
       </div>
     </div>

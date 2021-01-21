@@ -1,13 +1,14 @@
 import React from "react";
 import "./styles.css";
-import Carrusel from "../../../components/Carrusel";
 import CardApartment from "../../../components/CardApartment";
 
 const Apartments = () => {
   return (
     <div className="apartments">
-      <Carrusel />
-      <div className="grid-container">
+      <div className="thumApart">
+        <h1 className="presen">Encuentra tu Alojamiento</h1>
+      </div>
+      <div className="apartmentSection">
         <CardApartment
           className="card"
           image="https://picsum.photos/200/300"

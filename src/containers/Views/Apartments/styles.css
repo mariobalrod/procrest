@@ -1,12 +1,29 @@
 
-.grid-container {
+.apartmentSection {
     max-width: 80rem;
     margin: 97px auto;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
-    grid-gap: 2rem;
-    margin-top: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
     height: 100%;
 }
 
+.thumApart{
+    background: url('./Thumbail.jpg') no-repeat center center;
+    background-size: cover;
+    width: 100%;
+    height: 450px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
+.presen {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 50px;
+    line-height: 61px;
+    text-align: center;
+    color: #FFFFFF;
+}
