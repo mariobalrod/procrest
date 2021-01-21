@@ -18,6 +18,26 @@
     font-size: 20px;
 }
 
+.imgCar {
+    width: 100%;
+    background-size: cover;
+    height: 450px;
+    margin: 0;
+}
+
+#img1 {
+    background: url('./images/carrusel1.jpg') no-repeat center center;
+}
+#img2 {
+    background: url('./images/carrusel2.jpg') no-repeat center center;
+}
+#img3 {
+    background: url('./images/carrusel3.jpg') no-repeat center center;
+}
+#img4 {
+    background: url('./images/carrusel4.jpg') no-repeat center center;
+}
+
 /*  RESPONSIVE TABLET */
 @media (max-width:1030px){
     #titulo{
