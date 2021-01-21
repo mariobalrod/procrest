@@ -19,7 +19,8 @@ const useConnect = () => {
     return {
         isAuth,
         isLoading,
-        handleLogout
+        handleLogout,
+        me,
     }
 }
 

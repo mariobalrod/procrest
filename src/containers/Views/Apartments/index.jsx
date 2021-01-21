@@ -30,6 +30,7 @@ const Apartments = () => {
             name={apartment.name}
             description={apartment.description}
             price={apartment.price}
+            hasButtom={true}
           />
         ))}
       </div>
