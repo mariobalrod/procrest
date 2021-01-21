@@ -16,29 +16,20 @@ function Carrusel() {
             </ol>
             <div className="carousel-inner ">
                 <div className="carousel-item active ">
-                <img className="d-block w-100" src={carrusel1} alt="Second slide" />
-                    <div className="carousel-caption d-none d-md-block" id="texto">
-                        <p id="titulo">Top apartamentos del mes</p>
+                    <img className="d-block w-100" src={carrusel1} alt="Second slide" />
 
-                    </div>
                 </div>
                 <div className="carousel-item ">
-                   <img className="d-block w-100" src={carrusel2} alt="Second slide" />
-                    <div className="carousel-caption d-none d-md-block">
-                        <p id="titulo">Top apartamentos del mes</p>
-                    </div>
+                    <img className="d-block w-100" src={carrusel2} alt="Second slide" />
+
                 </div>
                 <div className="carousel-item ">
-                <img className="d-block w-100" src={carrusel3} alt="Second slide" />
-                    <div className="carousel-caption d-none d-md-block">
-                        <p id="titulo">Top apartamentos del mes</p>
-                    </div>
+                    <img className="d-block w-100" src={carrusel3} alt="Second slide" />
+
                 </div>
                 <div className="carousel-item ">
-                <img className="d-block w-100" src={carrusel4} alt="Second slide" />
-                    <div className="carousel-caption d-none d-md-block">
-                        <p id="titulo">Top apartamentos del mes</p>
-                    </div>
+                    <img className="d-block w-100" src={carrusel4} alt="Second slide" />
+
                 </div>
             </div>
             <a className="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">

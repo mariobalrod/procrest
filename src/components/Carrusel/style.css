@@ -12,3 +12,12 @@
     margin-left: 190px;
 }
 
+/*  RESPONSIVE TABLET */
+@media (max-width:1030px){
+    #titulo{
+        margin-bottom: 700px;
+    }
+    .carousel-caption{
+        margin-bottom: 80px;
+    }
+}

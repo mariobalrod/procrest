@@ -1,0 +1,56 @@
+h1{
+    text-align: center;
+    font-size: xx-large;
+
+    margin-top: 80px;
+    margin-bottom: 50px;
+}
+
+
+
+.thumYurtas{
+    background: url('../../../assets/category/yurtas.png') no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 340px;
+}
+
+.thumDomos{
+    background: url('../../../assets/category/domos.png') no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 340px;
+}
+
+.thumGlamping{
+    background: url('../../../assets/category/glamping.png') no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 340px;
+}
+
+.thumCastillos{
+    background: url('../../../assets/category/chalets.png') no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 340px;
+}
+
+.thumChalets{
+    background: url('../../../assets/category/castillos.png') no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 340px;
+}
+
+.thumRurales{
+    background: url('../../../assets/category/rurales.png') no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 340px;
+}
+
+/*  RESPONSIVE TABLET */
+@media (max-width:900px){
+    
+}
