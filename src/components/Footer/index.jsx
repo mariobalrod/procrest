@@ -81,7 +81,7 @@ const Footer = () => {
           </p>
         </div>
 
-        <ul class="listF">
+        <ul className="listF">
           <h6>Busca por ciudades</h6>
           <li>Sevilla</li>
           <li>Granada</li>
@@ -94,7 +94,7 @@ const Footer = () => {
           <li>Palma de Mallorca</li>
         </ul>
 
-        <ul class="listF">
+        <ul className="listF">
           <h6>Tipos de alojamientos</h6>
           <li>Yurtas</li>
           <li>Domos</li>
@@ -104,7 +104,7 @@ const Footer = () => {
           <li>Rurales</li>
         </ul>
 
-        <ul class="listF">
+        <ul className="listF">
           <h6>Enlaces de interés</h6>
           <li>¿Qué es Procrest?</li>
           <li>Politica de pre-reserva</li>

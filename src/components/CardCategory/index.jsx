@@ -4,23 +4,27 @@ import './styles.css'
 
 
 function CardCategory(props) {
-    return (
-        <div>
-            <div className="card" >
-                <div className="row no-gutters">
-                    <div className="col-sm-5">
-                        <div style={{background: `url(${props.image}) no-repeat`, backgroundSize: 'cover'}}></div>
-                    </div>
-                    <div className="col-sm-7">
-                        <div className="card-body">
-                            <h5 className="card-title">{props.titulo}</h5>
-                            <p className="card-text">{props.descripcion}</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    )
+  return (
+    <div className="cardCategory">
+        {console.log(props.image)}
+        <div
+          className="imageCat"
+          style={{
+            width: '100%',
+            height: '100%',
+            background: `url(${props.image}) no-repeat center center`,
+            backgroundSize: "cover",
+            borderTopLeftRadius: '15px',
+            borderBottomLeftRadius: '15px',
+          }}
+        ></div>
+
+      <div className="contentCat">
+        <h5 className="card-title">{props.title}</h5>
+        <p className="card-text">{props.description}</p>
+      </div>
+    </div>
+  );
 }
 
 export default CardCategory;

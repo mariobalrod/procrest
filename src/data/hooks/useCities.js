@@ -11,7 +11,7 @@ const citiesReq = async () => {
   }
 };
 
-const useAuth = () => {  
+const useCities = () => {  
   const { data: cities, isLoading } = useQuery('cities', citiesReq);
 
   return {
@@ -20,4 +20,4 @@ const useAuth = () => {
   };
 };
 
-export default useAuth;
+export default useCities;
