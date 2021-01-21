@@ -31,11 +31,6 @@ function TopBar(props) {
             </Link>
           </li>
           <li className="nav-item">
-            <Link className="nav-link" to="/about">
-              Sobre nosotros
-            </Link>
-          </li>
-          <li className="nav-item">
             <Link className="nav-link" to="/cities">
               Ciudades
             </Link>
@@ -48,6 +43,11 @@ function TopBar(props) {
           <li className="nav-item">
             <Link className="nav-link" to="/apartments">
               Alojamientos
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link className="nav-link" to="/about">
+              Sobre nosotros
             </Link>
           </li>
         </ul>
