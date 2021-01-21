@@ -1,11 +1,10 @@
 import React from 'react'
 import './styles.css'
-
-
+import { Link } from 'react-router-dom';
 
 function CardCategory(props) {
   return (
-    <div className="cardCategory">
+    <Link to={`/apartments?category=${props.id}`} className="cardCategory">
         <div
           className="imageCat"
           style={{
@@ -22,7 +21,7 @@ function CardCategory(props) {
         <h5 className="card-title">{props.title}</h5>
         <p className="card-text">{props.description}</p>
       </div>
-    </div>
+    </Link>
   );
 }
 

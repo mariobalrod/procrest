@@ -25,6 +25,7 @@ const Categories = () => {
         {categories.map(category => (
           <CardCategory
             key={category.id}
+            id={category.id}
             image={category.image}
             title={category.name}
             description={category.description}
