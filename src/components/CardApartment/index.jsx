@@ -9,8 +9,8 @@ const CardApartment = (props) => {
       style={{
         display: "flex",
         flexDirection: "column",
-        maxWidth: "250px",
-        margin: "20px",
+        maxWidth: "252px",
+        margin: "50px",
         borderLeft: "1px solid gainsboro",
         borderRight: "1px solid gainsboro",
         borderBottom: "1px solid gainsboro",

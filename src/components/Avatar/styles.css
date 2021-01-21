@@ -1,11 +1,11 @@
 .containerAvatar{
     width: 37px;
+    height: 37px;
     background: #3F51F4;
     border: 1px solid #F4F4F4;
     box-sizing: border-box;
     font-weight: 600;
     font-size: 13px;
-    line-height: 16px;
     text-align: center;
     text-decoration: none;
     cursor: pointer;
@@ -17,4 +17,21 @@
 .containerAvatar:hover{
     color: #FFFFFF;
     background-color: hsl(234, 87%, 65%);
+}
+
+.bigAvatar{
+    width: 250px;
+    height: 250px;
+    background: #3F51F4;
+    box-sizing: border-box;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 144px;
+    text-align: center;
+    cursor: pointer;
+    color: #FFFFFF;
+    padding: 7px 10px;
+    border-radius: 50%;
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.35);
+    
 }
