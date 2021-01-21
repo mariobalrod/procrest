@@ -7,6 +7,9 @@
     margin: 50px;
     border: 1px solid gainsboro;
     border-radius: 15px;
+    text-decoration: none;
+    cursor: pointer;
+    color: black
 }
 
 .contentCat {
