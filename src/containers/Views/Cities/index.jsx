@@ -23,7 +23,7 @@ const Cities = () => {
         <h1 className="presen">Encuentre su ciudad</h1>
       </div>
       <Searcher />
-      <div className="containerCards">
+      <div className="containerCardsCities">
         {cities.map((city) => (
           <CardCity key={city.id} id={city.id} cityimage={city.image} citytext={city.name} />
         ))}
