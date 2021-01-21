@@ -33,6 +33,7 @@ const Profile = () => {
         <div className="cartasPerfil">
           <div id="fila1">
             <CardApartment
+              hasButtom={false}
               name="Casa Palacio"
               image="https://i.imgur.com/TEfwhA3.jpg"
               description="Monasterio del s.XVIII completamente remodelado con las máximas comodidades convertido en un lugar único.
@@ -40,6 +41,7 @@ const Profile = () => {
               6 baños completos."
             />
             <CardApartment
+              hasButtom={false}
               name="Nilgar"
               image="https://i.imgur.com/DAXSN4U.jpg"
               description="Ideal para 5 personas.
@@ -48,6 +50,7 @@ const Profile = () => {
               Jacuzzi."
             />
             <CardApartment
+              hasButtom={false}
               name="Cabaña Lalo"
               image="https://i.imgur.com/RF8xFpn.png"
               description="Piscina-Jacuzzi en una gruta volcánica, climatizada.
@@ -57,6 +60,7 @@ const Profile = () => {
           </div>
           <div id="fila2">
             <CardApartment
+              hasButtom={false}
               name="Girante"
               image="https://i.imgur.com/JDgCOjQ.jpg"
               description="Solárium con hamacas.
@@ -65,6 +69,7 @@ const Profile = () => {
               7 baños completos."
             />
             <CardApartment
+              hasButtom={false}
               name="Quitan linda"
               image="https://imgur.com/hlX0QSn.jpg"
               description="Espectacular villa situada entre la playa y el monte.
@@ -73,6 +78,7 @@ const Profile = () => {
               6 baños completos."
             />
             <CardApartment
+              hasButtom={false}
               name="Caloan"
               image="https://i.imgur.com/LBKlckX.jpg"
               description="Diseñado para una escapada romántica para 2 personas en un entorno muy privado, tranquilo y hermoso, con vistas de largo alcance.

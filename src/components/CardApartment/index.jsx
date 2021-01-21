@@ -70,7 +70,9 @@ const CardApartment = (props) => {
           </div>
         </div>
         <p className="card-text paragraphAp">{props.description}</p>
-        <Button type="button" text="Reservar" />
+        {props.hasButtom && (
+          <Button type="button" text="Reservar" />
+        )}
       </div>
     </div>
   );
