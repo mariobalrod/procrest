@@ -1,11 +1,10 @@
-import { useQuery } from 'react-query';
+import { useMutation } from 'react-query';
 import client from '../axiosClient';
+import { useCallback } from 'react';
 
-const postBooking = async (params) => {
+const postBooking = async (booking) => {
   try {
-    const booking = params.queryKey[1];
-    
-    const { data } = await client.post(`/bookings`, JSON.parse(booking));
+    const { data } = await client.post(`/bookings`, booking);
 
     return data;
   } catch (error) {
@@ -13,11 +12,19 @@ const postBooking = async (params) => {
   }
 };
 
-const useActionBooking = (booking) => {  
-  const { data: response, isLoading } = useQuery(['booking', booking], postBooking);
+const useActionBooking = () => {  
+  const { mutateAsync, isLoading } = useMutation((booking) => postBooking(booking));
+
+  const createBooking = useCallback(
+    async (booking) => {
+      const response = await mutateAsync(booking);
+      return response;
+    },
+    [mutateAsync]
+  );
 
   return {
-    response,
+    createBooking,
     isLoading,
   };
 };

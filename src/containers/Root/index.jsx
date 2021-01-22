@@ -11,6 +11,7 @@ import Cities from '../Views/Cities';
 import Categories from '../Views/Categories';
 
 import Profile from '../Views/Profile';
+import Booking from '../Views/Booking';
 
 import useConnect from './connect';
 import { useLoading, ThreeDots } from '@agney/react-loading';
@@ -42,6 +43,7 @@ const Root = () => {
         <Route component={Categories} exact path="/categories" />
         <Route component={Apartments} exact path="/apartments" />
         <Route component={Profile} exact path="/profile" />
+        <Route component={Booking} exact path="/booking" />
 
         <Redirect to="/" />
       </Switch> 
