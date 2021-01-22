@@ -18,8 +18,8 @@ const Profile = () => {
   )
   return (
     <div>
-      <div  id="logout" >
-        <button className="logout"onClick={handleLogout}>
+      <div id="logout" >
+        <button className="logout" onClick={handleLogout}>
           <img src={LogoutIcon} alt="logout" />
         </button>
       </div>
@@ -30,52 +30,28 @@ const Profile = () => {
             size="big"
           />
         </div>
-        {(me.bookings.length === 0)  ? (
-          
-         <div id="empty">
+        {(me.bookings.length === 0) ? (
+
+          <div id="empty">
             <h1>¿Aun no tiene ninguna reserva?</h1>
-           <img  src={Empty} alt="empty"/>
-          </div>
-        ) : (
-
-          <div id="booking">
-            <h1>Historial de reservas</h1>
-            {me.bookings.map(apartamentBooking =>(
-              <CardApartment
-              key ={apartamentBooking.id}
-              image={apartamentBooking.image}
-              name={apartamentBooking.name}
-              description={apartamentBooking.description}
-              date={apartamentBooking.date}
-              />
-            ))}            
-          </div>
-
-        )}
-        
-
+            <img src={Empty} alt="empty" />
+          </div>):(
+            <div id="booking">
+              <h1>Historial de reservas</h1>
+              {me.bookings.map(apartamentBooking => (
+                <CardApartment
+                  key={apartamentBooking.id}
+                  image={apartamentBooking.image}
+                  name={apartamentBooking.name}
+                  description={apartamentBooking.description}
+                  date={apartamentBooking.date}
+                />
+              ))}
+            </div>
+          )}
       </div>
     </div>
   );
 };
 
 export default Profile;
-
-/*
-<div className="imgProfile">
-          </div>
-
-<div className="cartasPerfil">
-          <div id="fila1">
-            {apartamentsBooking.map(apartamentBooking =>(
-              <CardApartment
-              key ={apartamentBooking.id}
-              image={apartamentBooking.image}
-              name={apartamentBooking.name}
-              description={apartamentBooking.description}
-              date={apartamentBooking.date}
-              />
-            ))}            
-          </div>
-        </div>
-*/ 
