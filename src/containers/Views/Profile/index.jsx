@@ -49,11 +49,11 @@ const Profile = () => {
               <h1>Historial de reservas</h1>
               {me.bookings.map(apartamentBooking => (
                 <CardApartment
-                  key={apartamentBooking.id}
-                  image={apartamentBooking.image}
-                  name={apartamentBooking.name}
-                  description={apartamentBooking.description}
-                  date={apartamentBooking.date}
+                  key={apartamentBooking.apartment.id}
+                  image={apartamentBooking.apartment.image}
+                  name={apartamentBooking.apartment.name}
+                  description={apartamentBooking.apartment.description}
+                  date={apartamentBooking.apartment.date}
                 />
               ))}
             </div>
