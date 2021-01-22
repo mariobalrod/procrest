@@ -1,5 +1,5 @@
 import React from "react";
-import Button from "../Button"
+import Buttonlink from "../ButtonLink"
 import './styles.css';
 
 const CardApartment = (props) => {
@@ -73,7 +73,7 @@ const CardApartment = (props) => {
 
         {props.hasButtom && (
           <div className="footer-card">
-            <Button type="button" text="Reservar" />
+            <Buttonlink to={props.to} type="button" text="Reservar" />
             <p className="price">{props.price}€ / month</p>
           </div>
         )}
