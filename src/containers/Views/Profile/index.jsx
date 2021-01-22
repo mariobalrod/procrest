@@ -6,16 +6,25 @@ import { Redirect } from "react-router-dom";
 import LogoutIcon from '../../../assets/logOut.svg';
 import Avatar from '../../../components/Avatar';
 import CardApartment from '../../../components/CardApartment';
-import Empty from './Empty.svg'
+import { useLoading, ThreeDots } from '@agney/react-loading';
+import Loader from '../../../components/Loader';
+import Empty from './Empty.svg';
 
 const Profile = () => {
   const { isAuth, isLoading, handleLogout, me } = useConnect();
+  const { containerProps, indicatorEl } = useLoading({
+    loading: true,
+    indicator: <ThreeDots width="100" style={{ color: "white" }} />,
+  });
 
-  if (isLoading) return <>Loading...</>
+  if (isLoading) {
+    return <Loader indicator={indicatorEl} containerProps={containerProps} />;
+  }
 
   if (!isAuth) return (
     <Redirect to="/" />
   )
+
   return (
     <div>
       <div id="logout" >

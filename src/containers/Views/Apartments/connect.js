@@ -1,10 +1,12 @@
 import useApartments from '../../../data/hooks/useApartments';
+import useMe from '../../../data/hooks/useMe';
 import useQuery from '../../../utils/useQuery';
 
 const useConnect = () => {
   const { queryParams } = useQuery();
   const city = queryParams.get("city");
   const category = queryParams.get("category");
+  const { me, isLoading: meLoading } = useMe();
 
   const where = () => {
     if (city) return `?_where[city]=${city}`;
@@ -12,11 +14,12 @@ const useConnect = () => {
     return '';
   };
 
-  const { apartments, isLoading } = useApartments(where());
+  const { apartments, isLoading: apartmentLoading } = useApartments(where());
 
   return {
     apartments,
-    isLoading,
+    me,
+    isLoading: meLoading || apartmentLoading,
   };
 }
 
