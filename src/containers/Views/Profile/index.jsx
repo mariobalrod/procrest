@@ -45,17 +45,19 @@ const Profile = () => {
             <h1>¿Aun no tiene ninguna reserva?</h1>
             <img src={Empty} alt="empty" />
           </div>):(
-            <div id="booking">
+            <div>
               <h1>Historial de reservas</h1>
-              {me.bookings.map(apartamentBooking => (
-                <CardApartment
-                  key={apartamentBooking.id}
-                  image={apartamentBooking.image}
-                  name={apartamentBooking.name}
-                  description={apartamentBooking.description}
-                  date={apartamentBooking.date}
-                />
-              ))}
+              <div id="booking">
+                {me.bookings.map(apartamentBooking => (
+                  <CardApartment
+                    key={apartamentBooking.id}
+                    image={apartamentBooking.image}
+                    name={apartamentBooking.name}
+                    description={apartamentBooking.description}
+                    date={apartamentBooking.date}
+                  />
+                ))}
+              </div>
             </div>
           )}
       </div>
