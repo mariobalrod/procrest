@@ -11,10 +11,12 @@
 #navbarNav a{
     color: azure;
     margin-right: 15px;
+
 }
 
 .botones li{
     list-style: none;
+    
 }
 .botones{
     display: flex;
@@ -25,4 +27,16 @@
 
 #botonLogin{
     margin-right: 25px;
+}
+
+@media (max-width: 900px){
+    .botones{
+        display: flex;
+        flex-direction: column;
+    }
+  
+    #botonLogin{
+        margin-top: 35px;
+        margin-right: 0px;
+    }
 }
