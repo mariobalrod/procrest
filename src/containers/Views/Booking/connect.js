@@ -21,7 +21,8 @@ const useConnect = () => {
           user: me.id,
           apartment: apartment
       }).then(() => {
-        push('/profile')
+        push('/profile');
+        window.location.reload();
       })
     }
   }, [push, apartment, me, selectedDate, createBooking]);

@@ -73,7 +73,7 @@ const CardApartment = (props) => {
 
         {props.hasButtom && (
           <div className="footer-card">
-            <Buttonlink to={props.to} type="button" text="Reservar" />
+            <Buttonlink to={`/booking?apartment=${props.id}`} type="button" text="Reservar" />
             <p className="price">{props.price}€ / month</p>
           </div>
         )}
