@@ -1,5 +1,5 @@
 import React from "react";
-import Button from "../Button"
+import Buttonlink from "../ButtonLink"
 import './styles.css';
 
 const CardApartment = (props) => {
@@ -71,7 +71,7 @@ const CardApartment = (props) => {
         </div>
         <p className="card-text paragraphAp">{props.description}</p>
         {props.hasButtom && (
-          <Button type="button" text="Reservar" />
+          <Buttonlink to="/cities" type="button" text="Reservar" />
         )}
       </div>
     </div>
