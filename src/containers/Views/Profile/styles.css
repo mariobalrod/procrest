@@ -19,7 +19,7 @@
 h1{
     text-align: center;
 }
-.cartasPerfil{
+#booking{
     display: flex;
     justify-content: center;
     align-items: center;

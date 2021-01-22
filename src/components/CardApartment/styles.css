@@ -12,10 +12,7 @@
 .price{
     display: flex;
     justify-content: center;
-    margin-right: auto;
-    margin-left: 30px;
-    margin-bottom: auto;
-    margin-top: 10px;
+    margin:auto;
 }
 .button{
     display: flex;

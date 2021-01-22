@@ -38,22 +38,25 @@ const Profile = () => {
           <div id="empty">
             <h1>¿Aun no tiene ninguna reserva?</h1>
             <img src={Empty} alt="empty" />
+
           </div>
         ) : (
-          <div id="booking">
+          <>
             <h1>Historial de reservas</h1>
-            {console.log(bookings)}
-            {bookings.map((apartamentBooking) => (
-              <CardApartment
-                key={apartamentBooking.apartment.id}
-                image={apartamentBooking.apartment.image}
-                name={apartamentBooking.apartment.name}
-                description={apartamentBooking.apartment.description}
-                date={apartamentBooking.apartment.date}
-              />
-            ))}
-          </div>
+            <div id="booking">
+              {bookings.map((apartamentBooking) => (
+                <CardApartment
+                  key={apartamentBooking.apartment.id}
+                  image={apartamentBooking.apartment.image}
+                  name={apartamentBooking.apartment.name}
+                  description={apartamentBooking.apartment.description}
+                  date={apartamentBooking.apartment.date}
+                />
+              ))}
+            </div>
+          </>
         )}
+
       </div>
     </div>
   );
