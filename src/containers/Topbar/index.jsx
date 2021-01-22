@@ -55,7 +55,7 @@ function TopBar(props) {
         {props.user ? (
           <Avatar username={props.user.username} />
         ) : (
-          <div className="botones flex-row justify-content-center mt-3 mb-3 ml-4">
+          <div className="botones justify-content-center mt-3 mb-3 ml-4">
             <li className="nav-item" data-bs-toggle="modal" data-bs-target="#registerModal">
               <Button text="Registro" to="/register" />
             </li>

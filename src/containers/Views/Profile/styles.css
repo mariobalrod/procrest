@@ -19,22 +19,11 @@
 h1{
     text-align: center;
 }
-
-#fila1{
+.cartasPerfil{
     display: flex;
     justify-content: center;
     align-items: center;
 
-    margin-top: 100px;
-    margin-bottom: 50px;
-}
-#fila2{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    margin-top: 50px;
-    margin-bottom: 100px;
 }
 
 #iconoUser{
@@ -52,25 +41,41 @@ h1{
     margin-left: auto;
 
 }
-
-@media (max-width: 900px){
-    #fila1{
-        flex-wrap: wrap;
-        
-    }
-    #fila2{
-        flex-wrap: wrap;
-        
-    }
+#empty{  
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 200px;
 }
 
+#empty img{
+    margin-top: 100px;
+}
+
+@media (max-width: 900px){
+    #booking {
+        flex-wrap: wrap;
+        
+    }
+
+    #empty img{
+        width: 365px;
+        height: 500px;
+    }
+
+    #iconoUser{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        margin-top: 100px;
+        margin-bottom: 100px;
+    }
+} 
+
 @media (max-width: 1200px){
-    #fila1{
+    #booking { 
         flex-wrap: wrap;
         
     }
-    #fila2{
-        flex-wrap: wrap;
-        
-    }
+    
 }
