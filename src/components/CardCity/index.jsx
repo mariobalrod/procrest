@@ -10,7 +10,7 @@ const CardCity = (props) => {
         className="card-img-top"
       />
       <div className="card-body">
-        <h5 className="card-title">{props.citytext}</h5>
+        <h5 className="card-title-city">{props.citytext}</h5>
       </div>
     </Link>
   );

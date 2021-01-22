@@ -1,5 +1,5 @@
 import React from "react";
-import Button from "../Button"
+import Buttonlink from "../ButtonLink"
 import './styles.css';
 
 const CardApartment = (props) => {
@@ -33,7 +33,7 @@ const CardApartment = (props) => {
             marginBottom: "10px",
           }}
         >
-          <h5 className="card-title" style={{ marginBottom: "0" }}>
+          <h5 className="card-title-ap" style={{ marginBottom: "0" }}>
             {props.name}
           </h5>
           <div style={{ marginBottom: "5px" }}>
@@ -70,8 +70,12 @@ const CardApartment = (props) => {
           </div>
         </div>
         <p className="card-text paragraphAp">{props.description}</p>
+
         {props.hasButtom && (
-          <Button type="button" text="Reservar" />
+          <div className="footer-card">
+            <Buttonlink to={props.to} type="button" text="Reservar" />
+            <p className="price">{props.price}€ / month</p>
+          </div>
         )}
       </div>
     </div>

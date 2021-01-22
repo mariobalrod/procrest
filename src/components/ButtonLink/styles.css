@@ -1,0 +1,11 @@
+.botonN{
+    background-color: #7749F8;
+    border: 0px;
+    border-radius: 6px;
+    color: #FFFFFF;
+    padding: 5px 15px;
+}
+
+.botonN:hover{
+    background-color: #8d64ff;
+}

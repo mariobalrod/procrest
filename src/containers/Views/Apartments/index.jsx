@@ -30,8 +30,8 @@ const Apartments = () => {
             image={apartment.image}
             name={apartment.name}
             description={apartment.description}
-            price={apartment.price}
             hasButtom={me}
+            price={apartment.pricePerMonth}
           />
         ))}
       </div>
